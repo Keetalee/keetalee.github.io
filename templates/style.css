@@ -1,0 +1,29 @@
+/* Example styles for love-letter div */
+.love-letter {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 50px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+/* Default background image for desktop */
+body {
+    background-image: url("{{ url_for('static', filename='Image/Home.jpg') }}");
+    background-size: cover; /* Adjust as needed for desktop */
+    color: white; /* Text color set to white */
+}
+
+/* Media query for mobile screens */
+@media screen and (max-width: 768px) {
+    body {
+        background-image: url("{{ url_for('static', filename='Image/Home.jpg') }}");
+        background-size: contain; /* Change to 'contain' for mobile */
+        background-position: center; /* Center the image */
+        /* Other background properties for mobile */
+    }
+}
+
+
+

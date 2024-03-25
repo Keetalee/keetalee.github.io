@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Love Letter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Example styles for love-letter div */
+        .love-letter {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh; /* Set the height to fill the viewport */
+            position: relative;
+            overflow: hidden;
+        }
+
+        body {
+            background-image: url("{{ url_for('static', filename='Image/Home (1).jpg') }}");
+            background-size: cover; /* Adjust as needed for desktop */
+            color: white; /* Text color set to white */
+        }
+
+        /* Media query for mobile screens */
+        @media screen and (max-width: 768px) {
+            body {
+                background-image: url("{{ url_for('static', filename='Image/Home (1).jpg') }}");
+                background-size: contain; /* Change to 'contain' for mobile */
+                background-position: center; /* Center the image */
+                /* Other background properties for mobile */
+            }
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .content h1,
+        .content p {
+            margin-bottom: 20px;
+        }
+
+        .btn-container {
+            position: absolute;
+            bottom: 150px;
+            right: 450px;
+        }
+
+        .btn {
+            padding: 25px 40px;
+            font-size: 16px;
+            background-color: #fff;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="love-letter">
+        <div class="btn-container">
+            <a href="{{ url_for('show_letter') }}" class="btn">Click here</a>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+</body>
+</html>
+
+
+
