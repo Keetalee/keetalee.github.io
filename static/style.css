@@ -10,7 +10,7 @@
 
 /* Default background image for desktop */
 body {
-    background-image: url("{{ url_for('static', filename='Image/Home.jpg') }}");
+    background-image: url("{{ url_for('static', filename='Image/Home(1).jpg') }}");
     background-size: cover; /* Adjust as needed for desktop */
     color: white; /* Text color set to white */
 }
@@ -18,7 +18,7 @@ body {
 /* Media query for mobile screens */
 @media screen and (max-width: 768px) {
     body {
-        background-image: url("{{ url_for('static', filename='Image/Home.jpg') }}");
+        background-image: url("{{ url_for('static', filename='Image/Home(1).jpg') }}");
         background-size: contain; /* Change to 'contain' for mobile */
         background-position: center; /* Center the image */
         /* Other background properties for mobile */
